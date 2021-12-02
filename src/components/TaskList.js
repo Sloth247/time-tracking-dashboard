@@ -1,20 +1,17 @@
-// import { useState } from "react";
-
-import { useFetch } from "../hooks/useFetch";
-
-import { useFrequency } from "../hooks/useFrequency";
-
-//import data from "../data.json";
+// styles
+import "./TaskList.scss";
 
 //images
 import Dot from "../assets/icon-ellipsis.svg";
 
-// styles
-import "./TaskList.scss";
+import { useFetch } from "../hooks/useFetch";
+import { useFrequency } from "../hooks/useFrequency";
+
+//import data from "../data.json";
 
 export default function TaskList() {
   // const [url, setUrl] = useState("http://localhost:3000/stats");
-  const { data: stats, isPending, error } = useFetch("./data.json");
+  const { data, isPending, error } = useFetch("./data.json");
 
   const { frequency } = useFrequency();
   const urlDot = "#";
@@ -23,8 +20,8 @@ export default function TaskList() {
       {isPending && <div>Loading stats...</div>}
       {error && <div>{error}</div>}
       <ul className="main__task-list">
-        {stats &&
-          stats.map((stat) => (
+        {data &&
+          data.stats.map((stat) => (
             <li
               className={
                 stat.title === "Self Care"
