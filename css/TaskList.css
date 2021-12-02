@@ -1,0 +1,131 @@
+@media screen and (min-width: 65em) {
+  .main {
+    grid-column: 2/-1;
+  }
+}
+.main__task-list {
+  display: unset;
+}
+@media screen and (min-width: 65em) {
+  .main__task-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(-webkit-min-content, -webkit-max-content));
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+}
+.main__task-item {
+  border-radius: 1.2rem;
+  padding-top: 2.375rem;
+}
+@media screen and (min-width: 65em) {
+  .main__task-item {
+    padding-top: 2.8125rem;
+  }
+}
+.main__task-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 65em) {
+  .main__task-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.main__task-item-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(-webkit-min-content, -webkit-max-content));
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-row-gap: 1rem;
+  padding: 1.75rem 1rem;
+  background-color: #1c1f4a;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 65em) {
+  .main__task-item-container {
+    grid-template-rows: repeat(3, minmax(-webkit-min-content, -webkit-max-content));
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    padding: 1.8rem 1.85rem;
+  }
+}
+.main__task-item.work {
+  background-color: #ff8c66;
+  background-image: url("../assets/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.main__task-item.play {
+  background-color: #56c2e6;
+  background-image: url("../assets/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.main__task-item.study {
+  background-color: #ff5c7c;
+  background-image: url("../assets/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.main__task-item.exercise {
+  background-color: #4acf81;
+  background-image: url("../assets/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: top right 1rem;
+}
+.main__task-item.social {
+  background-color: #7536d3;
+  background-image: url("../assets/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.main__task-item.selfcare {
+  background-color: #f1c65b;
+  background-image: url("../assets/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.main__task-title {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.main__task-dot {
+  grid-row: 1/2;
+  grid-column: 2/-1;
+  justify-self: end;
+}
+.main__task-current {
+  grid-row: 2/-1;
+  grid-column: 1/2;
+  font-size: 2rem;
+}
+@media screen and (min-width: 65em) {
+  .main__task-current {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-size: 3.5rem;
+  }
+}
+.main__task-previous {
+  grid-row: 2/-1;
+  grid-column: 2/-1;
+  color: #bdc1ff;
+  justify-self: end;
+  font-size: 1rem;
+}
+@media screen and (min-width: 65em) {
+  .main__task-previous {
+    grid-row: 3/-1;
+    grid-column: 1/-1;
+    justify-self: start;
+  }
+}
+
+/*# sourceMappingURL=TaskList.css.map */

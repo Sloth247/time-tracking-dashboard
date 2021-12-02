@@ -1,0 +1,40 @@
+.header {
+  background-color: #1c1f4a;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.header__switches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 65em) {
+  .header__switches {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1.5rem 2rem;
+  }
+}
+@media screen and (min-width: 65em) {
+  .header__switches button:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.active {
+  color: #fff;
+}
+
+/*# sourceMappingURL=FrequencySelector.css.map */
