@@ -14,11 +14,7 @@ import "./TaskList.scss";
 
 export default function TaskList() {
   // const [url, setUrl] = useState("http://localhost:3000/stats");
-  const {
-    data: stats,
-    isPending,
-    error,
-  } = useFetch(process.env.REACT_APP_BACKEND_URL + "/stats");
+  const { data: stats, isPending, error } = useFetch("./data.json");
 
   const { frequency } = useFrequency();
   const urlDot = "#";
