@@ -1,0 +1,22 @@
+@mixin mq($breakpoint) {
+  @if $breakpoint == small {
+    @media screen and (min-width: 30em) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media screen and (min-width: 40em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media screen and (min-width: 65em) {
+      @content;
+    }
+  }
+}
+//   @mixin prm {
+//     @media (prefers-reduced-motion) {
+//       @content;
+//     }
+//   }
