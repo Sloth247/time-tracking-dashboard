@@ -1,6 +1,9 @@
 //import { useState } from "react";
 import { useFrequency } from "../hooks/useFrequency";
 
+// react-router-dom
+import { Link } from "react-router-dom";
+
 // Styles
 import "./FrequencySelector.scss";
 
@@ -14,33 +17,36 @@ export default function FrequencySelector() {
 
   return (
     <div className="header__switches">
-      <button
-        aria-expanded={frequency === "daily" ? "true" : "false"}
+      <Link
+        to="?freq=daily"
         onClick={() => {
           changeFrequency("daily");
         }}
         className={frequency === "daily" ? "active" : ""}
+        aria-current={frequency === "daily" ? "page" : ""}
       >
         Daily
-      </button>
-      <button
-        aria-expanded={frequency === "weekly" ? "true" : "false"}
+      </Link>
+      <Link
+        to="?freq=weekly"
         onClick={() => {
           changeFrequency("weekly");
         }}
         className={frequency === "weekly" ? "active" : ""}
+        aria-current={frequency === "weekly" ? "page" : ""}
       >
         Weekly
-      </button>
-      <button
-        aria-expanded={frequency === "monthly" ? "true" : "false"}
+      </Link>
+      <Link
+        to="?freq=monthly"
         onClick={() => {
           changeFrequency("monthly");
         }}
         className={frequency === "monthly" ? "active" : ""}
+        aria-current={frequency === "monthly" ? "page" : ""}
       >
         Monthly
-      </button>
+      </Link>
     </div>
   );
 }

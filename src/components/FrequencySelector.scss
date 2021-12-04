@@ -17,7 +17,7 @@
       justify-content: center;
       padding: 1.5rem 2rem;
     }
-    & button:not(:last-child) {
+    & a:not(:last-child) {
       @include mixins.mq(large) {
         margin-bottom: 1rem;
       }

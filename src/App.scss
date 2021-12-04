@@ -38,12 +38,11 @@ li {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: variables.$color-button-text;
   cursor: pointer;
 }
 
 button {
-  color: variables.$color-button-text;
   background-color: transparent;
   border: none;
   cursor: pointer;
